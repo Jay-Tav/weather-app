@@ -1,0 +1,35 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set html, body, and root element to take full height */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Base styles for the body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure images and media don't exceed their container's width */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}

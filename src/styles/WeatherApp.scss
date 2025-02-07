@@ -1,0 +1,227 @@
+// Define Colors
+$app-bg: #eef2f3;
+$primary-color: #4a90e2;
+$secondary-color: #2c3e50;
+$white: #fff;
+$card-bg: #f9f9f9;
+$shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+.weather-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $app-bg;
+}
+
+.header {
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  color: $white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.tagline {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: $secondary-color;
+  margin-bottom: 1rem;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 3rem;
+
+  input {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    width: 300px;
+  }
+
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    background: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.weather-card {
+  flex: 1;
+  background-color: $card-bg;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 0.5s ease-in-out;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    padding: 0.7rem 1rem;
+    background: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+  .local-time {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+
+  .weather-icon {
+    width: 80px;
+    margin-bottom: 0.5rem;
+  }
+
+  .temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  .feels-like {
+    font-size: 1rem;
+    color: #777;
+  }
+
+  .extra-details {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #444;
+    text-align: left;
+  }
+}
+
+.history {
+  flex: 1;
+  background-color: $card-bg;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem;
+      background-color: #4a90e2;
+      color:  #fff;;
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: #dce6f2;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $secondary-color;
+  color: $white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+  .search input {
+    width: 200px;
+  }
+
+  .weather-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
