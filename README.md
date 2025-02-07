@@ -1,5 +1,6 @@
 # 🌍 Global Weather App
 
+
 ### **A React & TypeScript-based Weather Application using WeatherStack API**
 
 ## 📌 **Overview**
@@ -7,10 +8,15 @@ The **Global Weather App** is a modern web application that provides real-time w
 
 ## 🚀 **Features**
 ✅ **Search Weather**: Enter a city name to get real-time weather updates.
+
 ✅ **Detailed Weather Data**: View temperature, humidity, wind speed, pressure, and more.
+
 ✅ **Search History**: Keeps track of previously searched cities.
+
 ✅ **Auto-Refresh**: Updates weather data every 5 minutes.
+
 ✅ **Unit Testing**: Includes Jest & React Testing Library for robust testing.
+
 ✅ **SCSS Styling**: Responsive and modern UI with SCSS.
 
 ## 🏗 **Project Structure**
